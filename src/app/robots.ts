@@ -1,11 +1,13 @@
 import type { MetadataRoute } from 'next'
 
+import { siteConfig } from '@/config/site'
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
       allow: '/'
     },
-    sitemap: 'https://iplookuptool.app/sitemap.xml'
+    sitemap: siteConfig.url.concat('/sitemap.xml')
   }
 }

@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import { siteConfig } from '@/config/site'
+
 import '@/styles/global.scss'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://iplookupt.vercel.app'),
+  metadataBase: new URL(siteConfig.url),
   alternates: {
-    canonical: 'https://iplookupt.vercel.app'
+    canonical: siteConfig.url
   },
 
   applicationName: 'IPLookup',
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
     title: 'IPLookup - Free IP Address Lookup Tool',
     description:
       'Discover your public IP address instantly. Get detailed information about your IPv4/IPv6, location, ISP, and network details with our free tool.',
-    url: 'https://iplookupt.vercel.app/',
+    url: siteConfig.url,
     siteName: 'IPLookup',
     type: 'website',
     locale: 'en_US',
