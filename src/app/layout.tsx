@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+
+import '@/styles/global.scss'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://iplookupt.vercel.app'),
@@ -66,11 +69,17 @@ export const metadata: Metadata = {
   }
 }
 
+const inter = Inter({
+  subsets: ['latin'],
+  style: 'normal',
+  display: 'swap'
+})
+
 type Props = Readonly<{ children: React.ReactNode }>
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang='en'>
+    <html lang='en' className={inter.className}>
       <body>{children}</body>
     </html>
   )
