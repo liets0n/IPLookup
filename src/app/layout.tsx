@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('iplookupt.vercel.app'),
+  metadataBase: new URL('https://iplookupt.vercel.app'),
   alternates: {
     canonical: 'https://iplookupt.vercel.app'
   },
